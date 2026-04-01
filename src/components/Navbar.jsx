@@ -4,7 +4,8 @@ export default function Navbar() {
   const { pathname } = useLocation();
   const links = [
     { label: 'Home', to: '/' },
-    { label: 'Upload', to: '/upload' }
+    { label: 'Upload', to: '/upload' },
+    { label: 'About Us', to: '/about' }
   ];
 
   return (

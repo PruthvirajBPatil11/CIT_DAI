@@ -5,6 +5,7 @@ import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Upload from './pages/Upload';
+import About from './pages/About';
 
 function App() {
   const [isInitialLoading, setIsInitialLoading] = useState(true);
@@ -51,6 +52,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/upload" element={<Upload />} />
+              <Route path="/about" element={<About />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
