@@ -14,8 +14,8 @@ const CLASS_LABELS = {
 };
 
 // Roboflow API Configuration
-const ROBOFLOW_API_KEY = 'r5DwvZgX7t9X3zmkaaY4';
-const MODEL_ID = 'my-first-project-qvd8s/2';
+const ROBOFLOW_API_KEY = 'DbjTdMmVAhJZYm8iBUJz';
+const MODEL_ID = 'cit-ykpoe/1';
 const ROBOFLOW_API_URL = 'https://serverless.roboflow.com';
 
 export default function Upload() {

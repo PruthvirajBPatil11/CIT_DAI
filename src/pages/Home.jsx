@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { APP_TITLE } from '../utils/constants';
 import TextType from '../components/TextType';
+import ScrollStack, { ScrollStackItem } from '../components/ScrollStack';
 
 export default function Home() {
   return (
@@ -43,23 +44,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mini Feature Section */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 w-full max-w-5xl animate-fade-in-up animate-delay-300">
-        <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan/50 transition-colors group">
-          <h3 className="text-xl font-bold mb-2 text-cyan">Fast Detection</h3>
-          <p className="text-sm text-blue-100/60">Sub-millisecond inference for critical orbital safety checks.</p>
-        </div>
-        
-        <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple/50 transition-colors group">
-          <h3 className="text-xl font-bold mb-2 text-purple">High Accuracy</h3>
-          <p className="text-sm text-blue-100/60">Advanced neural architectures optimized for 99.9% precision.</p>
-        </div>
-
-        <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-white/50 transition-colors group">
-          <h3 className="text-xl font-bold mb-2 text-white">Space Ready</h3>
-          <p className="text-sm text-blue-100/60">Validated against NASA standard safety equipment datasets.</p>
-        </div>
-      </section>
+      {/* ScrollStack Section */}
+      <div className="w-full mt-20">
+        <ScrollStack useWindowScroll={true}>
+          <ScrollStackItem>
+            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 h-full flex items-center justify-center rounded-2xl p-8">
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-cyan-300 mb-4">Model Used</h3>
+                <p className="text-white/80 text-lg">Advanced neural architecture optimized for space equipment detection</p>
+              </div>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+            <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 h-full flex items-center justify-center rounded-2xl p-8">
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-purple-300 mb-4">Data 1</h3>
+                <p className="text-white/80 text-lg">Training dataset with critical safety equipment annotations</p>
+              </div>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 h-full flex items-center justify-center rounded-2xl p-8">
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-blue-300 mb-4">Data 2</h3>
+                <p className="text-white/80 text-lg">Validation dataset ensuring model robustness and accuracy</p>
+              </div>
+            </div>
+          </ScrollStackItem>
+          <ScrollStackItem>
+            <div className="bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 h-full flex items-center justify-center rounded-2xl p-8">
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-emerald-300 mb-4">Data 3</h3>
+                <p className="text-white/80 text-lg">Test dataset simulating real-world orbital detection scenarios</p>
+              </div>
+            </div>
+          </ScrollStackItem>
+        </ScrollStack>
+      </div>
     </div>
   );
 }
